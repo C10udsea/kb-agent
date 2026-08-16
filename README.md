@@ -132,17 +132,6 @@ python -m unittest discover -s tests -v
 | `EMBEDDING_PROVIDER` | `auto` | `glm` / `voyage` / `openai` / `auto` |
 | `GLM_EMBEDDING_MODEL` | `embedding-3` | 如不可用改 `embedding-2` |
 
-常用组合：
-
-| 模式 | 对话 LLM | Embedding |
-|---|---|---|
-| DeepSeek + GLM（推荐） | DeepSeek | 智谱 GLM |
-| GLM 全家桶 | 智谱 GLM | 智谱 GLM |
-| 仅 DeepSeek | DeepSeek | 本地哈希（演示质量） |
-| 演示模式 | DemoChat 规则模型 | 本地哈希（演示质量） |
-
-> 更换 Embedding 服务商或模型后，需要重新入库：
-> `python scripts/ingest.py --clear`
 
 ---
 
@@ -217,32 +206,7 @@ kb-agent/
 
 评估使用临时向量库，不会污染你的 `data/` 目录。
 
----
 
-## FAQ
-
-| 现象 | 处理 |
-|---|---|
-| `No module named chromadb` | 确认已激活 `.venv`，重新执行 `pip install -r requirements.txt` |
-| ChromaDB 在 Python 3.14 装不上 | 换 Python 3.11 / 3.12 重建虚拟环境 |
-| ChromaDB 运行报错 | 程序自动退回 `data/fallback_store.json`，流程仍可运行 |
-| DeepSeek 401 | 检查 `DEEPSEEK_API_KEY`、`DEEPSEEK_BASE_URL` 与账户余额 |
-| GLM Embedding 报模型不存在 | 把 `GLM_EMBEDDING_MODEL` 改为 `embedding-2` |
-| 检索结果不相关 | 确认使用 GLM Embedding；调整 `--chunk-size` 与 `--top-k` |
-| 更换 Embedding 后报维度错误 | 运行 `python scripts/ingest.py --clear` 重新入库 |
-
----
-
-## Roadmap
-
-- [x] RAG 问答与引用来源
-- [x] Tool Use Agent 多步检索
-- [x] 多 Provider 支持（DeepSeek / GLM / Anthropic / OpenAI 兼容）
-- [x] 检索质量评估（Hit@k / MRR）
-- [ ] Web 界面（Streamlit / Gradio）
-- [ ] LLM-as-judge 自动评分
-- [ ] 按文档过滤检索（`source` 参数）
-- [ ] 更多文档格式（PDF / HTML）
 
 ---
 
