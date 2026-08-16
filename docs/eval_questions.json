@@ -1,0 +1,47 @@
+[
+  {
+    "question": "数字调制中 ASK、FSK、PSK 和 QAM 有什么区别？",
+    "sources": ["docs/通信原理基础.md"],
+    "keywords": ["ASK", "FSK", "PSK", "QAM", "载波"]
+  },
+  {
+    "question": "香农公式的含义是什么？带宽和信噪比如何影响信道容量？",
+    "sources": ["docs/通信原理基础.md"],
+    "keywords": ["香农公式", "带宽", "信噪比", "信道容量"]
+  },
+  {
+    "question": "奈奎斯特采样定理的内容是什么？采样频率不足会发生什么？",
+    "sources": ["docs/信号处理基础.md"],
+    "keywords": ["奈奎斯特", "采样频率", "频谱混叠"]
+  },
+  {
+    "question": "FIR 滤波器和 IIR 滤波器有什么区别？",
+    "sources": ["docs/信号处理基础.md"],
+    "keywords": ["FIR", "IIR", "线性相位", "反馈"]
+  },
+  {
+    "question": "什么是多径效应？OFDM 如何对抗多径引起的码间串扰？",
+    "sources": ["docs/无线通信与信道.md"],
+    "keywords": ["多径", "码间串扰", "OFDM", "循环前缀"]
+  },
+  {
+    "question": "MIMO 技术为什么能提高通信容量？",
+    "sources": ["docs/无线通信与信道.md"],
+    "keywords": ["MIMO", "空间复用", "容量", "多根天线"]
+  },
+  {
+    "question": "天线增益和方向性系数有什么关系？dBi 是什么意思？",
+    "sources": ["docs/天线原理.md"],
+    "keywords": ["增益", "方向性系数", "dBi", "各向同性"]
+  },
+  {
+    "question": "SPI 和 I2C 总线各自有什么优缺点？如何选择？",
+    "sources": ["docs/嵌入式通信接口.md"],
+    "keywords": ["SPI", "I2C", "全双工", "两线制", "片选"]
+  },
+  {
+    "question": "5G 的三大应用场景 eMBB、uRLLC、mMTC 分别是什么？",
+    "sources": ["docs/移动通信与5G.md"],
+    "keywords": ["eMBB", "uRLLC", "mMTC", "增强移动宽带", "低时延"]
+  }
+]

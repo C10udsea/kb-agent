@@ -1,0 +1,5 @@
+# kb-agent 核心依赖（国内可用）
+# 建议 Python 3.10 - 3.12（ChromaDB 对新版本 Python 的适配通常慢半拍）
+openai>=1.0
+chromadb>=1.0
+python-dotenv>=1.0
